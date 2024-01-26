@@ -1,12 +1,19 @@
 {% extends "basics.html" %}
 {% block title %}KABILAN_V webpage{% endblock title %}
 {% block hero %}
+
 <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
     <div class="hero-container" data-aos="fade-in">
-      <h1>Alex Smith</h1>
-      <p>I'm <span class="typed" data-typed-items="SOFMARE, Developer, Freel, Photographer"></span></p>
+      
+      {% if not request.user.is_authenticated%}  
+        <p> <span class="typed" data-typed-items="I am Kabilan, I am sophomore ,SignUp the Page..,And Login the Page..,Welcome to See You"></span></p>
+      {% else %}
+        <p> <span class="typed" data-typed-items="Welcome,to ,My portfolio"></span></p>
+      {% endif %}
     </div>
   </section>
+  
+  
 {% endblock hero %}
 {% block body %} 
 {% for message in messages  %}

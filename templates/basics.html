@@ -42,14 +42,15 @@
     <div class="d-flex flex-column">
 
       <div class="profile">
-        <img src="{% static "assets/img/profile-img.jpg" %}" alt="" class="img-fluid rounded-circle">
+        <img src="{% static "assets/img/profile-img.jpeg" %}" alt="" class="img-fluid rounded-circle">
         <h1 class="text-light"><a href="index.html">KABILAN</a></h1>
         <div class="social-links mt-3 text-center">
-          <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-          <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-          <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-          <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-          <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+          {% if  request.user.is_authenticated%}
+            <a href="https://leetcode.com/kabilan_v/" class="twitter"><i class="bx bxl-skype"></i></a>
+            <a href="https://github.com/kabilan-7-v" class="facebook"><i class="bx bxl-github"></i></a>
+            <a href="https://www.instagram.com/_kabi_lan_/" class="instagram"><i class="bx bxl-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/kabilan2004/" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+          {% endif %}
         </div>
       </div>
 
@@ -65,10 +66,11 @@
             <li><a href="/auth/signup/" class="nav-link scrollto"><i class="bx bx-user"></i> <span>Signup</span></a></li>
             <li><a href="/auth/login/" class="nav-link scrollto"><i class="bx bx-user"></i> <span>Login</span></a></li>
           {% else %}
-          <li><a href="/handleblog" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Blog</span></a></li>
+          
           <li><a href="/about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>About</span></a></li>
           <li><a href="/service" class="nav-link scrollto"><i class="bx bx-server"></i> <span>Skills</span></a></li> 
             <li><a href="/resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Resume</span></a></li>
+            <li><a href="/handleblog" class="nav-link scrollto"><i class="bx bx-home"></i> <span>Blog</span></a></li>
           
             <li><a href="/auth/logout/" class="nav-link scrollto"><i class="bx bx-user"></i> <span>Logout</span></a></li>
 
@@ -90,18 +92,6 @@
     {% endblock body %}
   </main>
 
-  <!-- ======= Footer ======= -->
-  <footer id="footer">
-    <div class="container">
-      <div class="copyright">
-        &copy; Copyright <strong><span>iPortfolio</span></strong>
-      </div>
-      <div class="credits">
-
-        Designed by <a href="">Kabilan</a>
-      </div>
-    </div>
-  </footer><!-- End  Footer -->
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
