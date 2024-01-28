@@ -282,6 +282,7 @@ h6 {
 #hero p span {
   color: #fff;
   padding-bottom: 4px;
+  
   letter-spacing: 1px;
   border-bottom: 3px solid #149ddd;
 }
@@ -299,7 +300,7 @@ h6 {
   }
 
   #hero h2 {
-    font-size: 18px;
+    font-size: 100px;
     line-height: 24px;
     margin-bottom: 30px;
   }
