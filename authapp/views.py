@@ -3,6 +3,7 @@ from django.contrib.auth.models import User
 from django.contrib.auth import authenticate,login,logout
 
 from django.contrib import messages
+"""
 def signup(request):
     if request.method=="POST":
         get_email=request.POST.get('email')
@@ -25,7 +26,7 @@ def handlelogout(request):
     logout(request)
     messages.success(request,"logout sucess")
 
-    return render(request,'login.html')
+    return render(request,'login.html')"""
 def handlelogin(request):
     if request.method=="POST":
         get_email=request.POST.get('email')

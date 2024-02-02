@@ -4,12 +4,14 @@
 
 <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
     <div class="hero-container" data-aos="fade-in">
-      
+      {% comment %}
       {% if not request.user.is_authenticated%}  
         <p> <span class="typed" data-typed-items="I am Kabilan, I am sophomore ,SignUp the Page..,And Login the Page..,Welcome to See You"></span></p>
       {% else %}
         <p> <span class="typed" data-typed-items="Welcome,to ,My portfolio"></span></p>
       {% endif %}
+      {% endcomment %}
+      <p> <span class="typed" data-typed-items="Welcome,to ,My portfolio"></span></p>
     </div>
   </section>
   
@@ -23,3 +25,4 @@
               </div>
               {% endfor %}
 {% endblock body %}
+{% load static %}

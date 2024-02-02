@@ -43,14 +43,15 @@
 
       <div class="profile">
         <img src="{% static "assets/img/profile-img.jpeg" %}" alt="" class="img-fluid rounded-circle">
-        <h1 class="text-light"><a href="index.html">KABILAN</a></h1>
+        <h1 class="text-light"><a href="/">KABILAN</a></h1>
         <div class="social-links mt-3 text-center">
-          {% if  request.user.is_authenticated%}
+          
             <a href="https://leetcode.com/kabilan_v/" target="_blank" class="twitter"><i class="bx bxl-skype"></i></a>
             <a href="https://github.com/kabilan-7-v"target="_blank"  class="facebook"><i class="bx bxl-github"></i></a>
             <a href="https://www.instagram.com/_kabi_lan_/" target="_blank" class="instagram"><i class="bx bxl-instagram"></i></a>
             <a href="https://www.linkedin.com/in/kabilan2004/" target="_blank" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-          {% endif %}
+           <!--{% if  request.user.is_authenticated%}-->
+          <!--{% endif %}-->
         </div>
       </div>
 
@@ -60,21 +61,20 @@
           
           
           
+          <li><a href="/" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a></li>
+           <li><a href="/about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>About</span></a></li>
+           <li><a href="/service" class="nav-link scrollto"><i class="bx bx-server"></i> <span>Skills</span></a></li> 
+            <li><a href="/resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Resume</span></a></li>
+            <li><a href="/handleblog" class="nav-link scrollto"><i class="bx bx-trophy"></i> <span>Achievements</span></a></li>
           
+           <!--<li><a href="/auth/logout/" class="nav-link scrollto"><i class="bx bx-user"></i> <span>Logout</span></a></li>
+         
           {% if not request.user.is_authenticated%}
           <li><a href="/" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a></li>
-            <!-- <li><a href="/auth/signup/" class="nav-link scrollto"><i class="bx bx-user"></i> <span>Signup</span></a></li>
+             <li><a href="/auth/signup/" class="nav-link scrollto"><i class="bx bx-user"></i> <span>Signup</span></a></li>
             <li><a href="/auth/login/" class="nav-link scrollto"><i class="bx bx-user"></i> <span>Login</span></a></li>   -->
-          {% else %}
-          <li><a href="/" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a></li>
-          <li><a href="/about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>About</span></a></li>
-          <li><a href="/service" class="nav-link scrollto"><i class="bx bx-server"></i> <span>Skills</span></a></li> 
-            <li><a href="/resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Resume</span></a></li>
-            <li><a href="/handleblog" class="nav-link scrollto"><i class="bx bx-home"></i> <span>Blog</span></a></li>
-          
-           <!-- <li><a href="/auth/logout/" class="nav-link scrollto"><i class="bx bx-user"></i> <span>Logout</span></a></li>
--->
-         {% endif %}
+          <!--{% else %}-->
+           <!--{% endif %}-->
          
          <li><a href="/contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
           
